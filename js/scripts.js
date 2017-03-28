@@ -5,17 +5,17 @@ function countUpBy(countTo, countBy) {
   } else if (!/\d/.test(countTo) || !/\d/.test(countBy)) {
     alert("countTo and countBy must be numbers");
   } else if ((countTo > 0 && countBy > 0) || (countTo < 0 && countBy < 0)) {
-    for (var i = 0; Math.abs(i) <= Math.abs(countTo); i += countBy) {
+    for (i = 0; Math.abs(i) <= Math.abs(countTo); i += countBy) {
       numbers.push(i);
     }
-  } else if (true) {
-    // for (var i = countTo; Math.abs(i) >= 0; i += countBy) {
-    //   numbers.push(i);
+  } else {
+    for (i = countTo; Math.abs(i) > 0; i += countBy) {
+      numbers.push(i);
     }
   }
 
   return numbers
 }
 
-var test = countUpBy(-50,-5);
+var test = countUpBy(-50,5);
 console.log(test)
